@@ -6,6 +6,7 @@
 
 
 function filter_title_save_pre( $title ) { 
+    date_default_timezone_set(get_option('timezone_string'));
     if ( $title == "" ) {
       return date( 'd/m/Y, H:i' ); 
     } else {
